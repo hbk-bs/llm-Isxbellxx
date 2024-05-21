@@ -1,0 +1,35 @@
+* {
+  box-sizing: border-box;
+  font-family: system-ui, sans-serif;
+  font-weight: normal;
+}
+html {
+  font-size: 18px;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0 auto;
+  width: 50vw;
+}
+
+button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+  width: 10rem;
+  font-style: oblique;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+button:hover {
+  background-color: #0056b3;
+}

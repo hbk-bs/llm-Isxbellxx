@@ -1,0 +1,36 @@
+# These are seom test agains the local API
+# Most of them are not expected do work
+
+### should fail due to GET not allowed
+GET http://localhost:8000
+
+### should fail due POST content-type not application/json
+
+POST http://localhost:8000
+
+### should fail due to POST with content-type
+# application/json needs a valid body
+
+POST http://localhost:8000
+Content-Type: application/json
+
+### should fail due to POST with content-type application/json
+# needs body in specific format
+# {messages: [{role: "system"| "assistant" | "user", content: string}]
+POST http://localhost:8000
+Content-Type: application/json
+
+{
+	"name": "John Doe"
+}
+
+### should pass POST with content-type application/json and body in specific format
+POST http://localhost:8000
+Content-Type: application/json
+
+{
+	"messages": [{
+		"role": "user",
+		"content":"Hello"
+	}]
+}
